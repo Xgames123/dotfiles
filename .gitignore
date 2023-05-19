@@ -1,0 +1,17 @@
+*
+!README.md
+
+!.zshrc
+!.bashrc
+!.aliases
+!.gitignore
+!.gitconfig
+
+!.dotfiles
+!.dotfiles/scripts
+
+!.config
+!.config/*
+!.config/neofetch/*
+!.config/neofetch/config.conf
+
