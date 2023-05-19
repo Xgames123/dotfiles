@@ -3,7 +3,8 @@ dotfiles that I use for arch linux but they should work on other oses
 
 
 ## linux install
-run ```
+run
+```
 git clone --bare https://github.com/Xgames123/dotfiles.git $HOME/.dotfiles/git
 git --dit-dir=$HOME/.dotfiles/git --work-tree=$HOME reset --hard HEAD
 ```
