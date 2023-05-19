@@ -1,8 +1,10 @@
 # dotfiles
 dotfiles that I use for arch linux but they should work on other oses
 
+## Installing
+IMPORTANT: I think your old dotfiles get overwriten when you install the new ones so MAKE A BACKUP OF YOUR OLD DOTFILES
 
-## linux install
+### linux install
 run
 ```
 git clone --bare https://github.com/Xgames123/dotfiles.git $HOME/.dotfiles/git
