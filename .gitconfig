@@ -6,3 +6,5 @@
 [user]
 	email = ldev@ldev.eu.org
 	name = ldev
+[pull]
+	rebase = true
