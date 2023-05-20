@@ -8,3 +8,5 @@
 	name = ldev
 [pull]
 	rebase = true
+[credentail]
+	helper = t/a/home/ldev/source/Repos/gh-login/target/debug/gh-login
