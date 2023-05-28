@@ -8,7 +8,9 @@ export ZSH_AUTOSUGGEST_STRATEGY=(match_prev_cmd history completion)
 
 # Load plugins
 export ZSH_PLUGIN_PATH=/usr/share/zsh/plugins
-source $ZSH_PLUGIN_PATH/*/*.plugin.zsh
+if [[ -d "$ZSH_PLUGIN_PATH" || "$(ls -A $ZSH_PLUGIN_PATH)" ]] ; then
+   source $ZSH_PLUGIN_PATH/*/*.plugin.zsh
+fi
 
 export GPG_TTY=$(tty)
 export GCM_CREDENTIAL_STORE=gpg
@@ -24,8 +26,8 @@ function reload()
 }
 
 
-if [ -r .aliases ] ; then
-   source .aliases
+if [ -r ~/.aliases ] ; then
+   source ~/.aliases
 fi
 
 #syntax highlighting
