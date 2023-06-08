@@ -12,11 +12,6 @@ if [[ -d "$ZSH_PLUGIN_PATH" || "$(ls -A $ZSH_PLUGIN_PATH)" ]] ; then
    source $ZSH_PLUGIN_PATH/*/*.plugin.zsh
 fi
 
-export GPG_TTY=$(tty)
-export GCM_CREDENTIAL_STORE=gpg
-
-export EDITOR=nano
-export SUDO_EDITOR=rnano
 
 export PS1="%n%~%# "
 
@@ -26,8 +21,8 @@ function reload()
 }
 
 
-if [ -r ~/.aliases ] ; then
-   source ~/.aliases
+if [ -r ~/.commonrc ] ; then
+   source ~/.commonrc
 fi
 
 #syntax highlighting

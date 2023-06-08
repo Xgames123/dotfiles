@@ -12,3 +12,9 @@
 	name = ldev
 [pull]
 	rebase = true
+[alias]
+	s = status
+	ca = commit -a
+	c = commit
+	p = push
+	pl = pull

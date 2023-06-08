@@ -8,12 +8,8 @@
 PS1='[\u@\h \W]\$ '
 
 
-if [ -r .aliases ]; then
-   source .aliases
-fi
-
-if [ -r $HOME/.cargo/env ] ; then
-   source $HOME/.cargo/env
+if [ -r $HOME/.commonrc ]; then
+   source $HOME/.commonrc
 fi
 
 
