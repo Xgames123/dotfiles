@@ -8,7 +8,7 @@ export ZSH_AUTOSUGGEST_STRATEGY=(match_prev_cmd history completion)
 
 # Load plugins
 export ZSH_PLUGIN_PATH=/usr/share/zsh/plugins
-if [[ -d "$ZSH_PLUGIN_PATH" || "$(ls -A $ZSH_PLUGIN_PATH)" ]] ; then
+if [[ -d "$ZSH_PLUGIN_PATH" && "$(ls -A $ZSH_PLUGIN_PATH)" ]] ; then
    source $ZSH_PLUGIN_PATH/*/*.plugin.zsh
 fi
 

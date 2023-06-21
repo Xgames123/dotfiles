@@ -4,6 +4,8 @@ alias ls="ls --color=auto"
 alias lsa="ls -a --color=auto"
 alias lsl="ls -l --color=auto"
 
+alias edit="$EDITOR"
 
 # dotfiles
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/git/ --work-tree=$HOME'
+

@@ -1,6 +1,6 @@
-[credential]
+[credential "https://github.com"]
 	helper =
-	helper = /home/ldev/source/repos/gh-login/target/debug/gh-login
+	helper = /home/ldev/source/repos/gh-login/target/debug/gh-login -b cache
 
 #[credential]
 #	helper = 
@@ -18,3 +18,4 @@
 	c = commit
 	p = push
 	pl = pull
+	out = !"sudo poweroff"
