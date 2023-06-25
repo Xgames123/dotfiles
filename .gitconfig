@@ -1,6 +1,6 @@
 [credential "https://github.com"]
 	helper =
-	helper = /home/ldev/source/repos/gh-login/target/debug/gh-login -b cache
+	helper = gh-login -b cache
 
 #[credential]
 #	helper = 
