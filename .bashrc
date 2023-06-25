@@ -8,8 +8,8 @@
 PS1='[\u@\h \W]\$ '
 
 
-if [ -r $HOME/.commonrc ]; then
-   source $HOME/.commonrc
+if [ -r $HOME/.profile ]; then
+   source $HOME/.profile
 fi
 
 

@@ -21,8 +21,8 @@ function reload()
 }
 
 
-if [ -r ~/.commonrc ] ; then
-   source ~/.commonrc
+if [ -r ~/.profile ] ; then
+   source ~/.profile
 fi
 
 #syntax highlighting
