@@ -1,12 +1,7 @@
+
 [credential "https://github.com"]
-	helper =
 	helper = gh-login -b cache
 
-#[credential]
-#	helper = 
-#	helper = /usr/bin/git-credential-manager
-[credential "https://dev.azure.com"]
-	useHttpPath = true
 [user]
 	email = ldev@ldev.eu.org
 	name = ldev
@@ -16,6 +11,6 @@
 	s = status
 	ca = commit -a
 	c = commit
-	p = push
+	pu = push
 	pl = pull
 	out = !"sudo poweroff"
