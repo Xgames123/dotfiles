@@ -20,10 +20,8 @@ function reload()
    source ~/.zshrc
 }
 
-
 if [ -r ~/.profile ] ; then
    source ~/.profile
-fi
 
 #syntax highlighting
 if [ -r $ZSH_PLUGIN_PATH/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh ] ; then
