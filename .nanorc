@@ -1,1 +1,11 @@
 include /usr/share/nano/*.nanorc
+set autoindent
+set linenumbers
+set unix # Save all files in unix format
+set tabsize 3
+set tabstospaces
+
+# Keybinds
+bind ^L gotoline all # Go to line
+bind ^Space mark all # Set mark
+

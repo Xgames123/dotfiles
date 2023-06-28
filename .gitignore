@@ -17,4 +17,9 @@
 !.config/*
 !.config/neofetch/*
 !.config/neofetch/config.conf
+!.config/foot/*
+!.config/foot/foot.ini
 
+!.poshthemes
+!.poshthemes/*
+!.poshthemes/ldev.json
