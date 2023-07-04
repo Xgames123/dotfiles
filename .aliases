@@ -3,6 +3,7 @@ alias grep="grep --color=auto"
 alias ls="ls --color=auto"
 alias lsa="ls -a --color=auto"
 alias lsl="ls -l --color=auto"
+alias lsla="ls -l -a --color=auto"
 
 alias edit="$EDITOR"
 

@@ -19,6 +19,10 @@
 !.config/neofetch/config.conf
 !.config/foot/*
 !.config/foot/foot.ini
+!.config/tofi/*
+!.config/tofi/config
+!.config/fnott/*
+!.config/fnott/fnott.ini
 
 !.poshthemes
 !.poshthemes/*

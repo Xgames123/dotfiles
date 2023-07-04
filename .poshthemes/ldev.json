@@ -9,12 +9,11 @@
 		  "type": "git",
 		  "style": "plain",
 		  "background": "#605040",
-        "foreground": "#ffd5a0",
+        "foreground": "#00aa6b0",
 		  "foreground_templates": [
-         "{{ if or .Working.Changed .Staging.Changed }}#ff6040{{ end }}",
-         "{{ if .UpstreamGone }}#ff4040{{ end }}"
+         "{{ if or .Working.Changed .Staging.Changed }}#ff6040{{ end }}"
 		  ],
-		  "template": "<background,transparent>\ue0b6</>{{ if .UpstreamGone }}<no upstream>{{ end }} \ue725 {{ .Ref }}{{ if gt .Behind 0 }} -{{ .Behind }}{{ end }}{{ if gt .Ahead 0 }} +{{ .Ahead }}{{ end }}|{{ .Working.String }}{{ if and .Working.Changed .Staging.Changed}}|{{ end }}{{ .Staging.String }} ",
+		  "template": "<background,transparent>\ue0b6</> \ue725 {{ .Ref }}{{ if gt .Ahead 0 }} {{ .Ahead }}\ueaa1{{ end }}{{ if gt .Behind 0 }} {{ .Behind }}\uea9a{{ end }}{{ if .Working.Changed }} | \uf044 {{ .Working.String }}{{ end }}{{ if .Staging.Changed }} | \uf046 {{ .Staging.String }}{{ end }} ",
 		  "properties": {
 			"fetch_status": true
 		  }
@@ -66,7 +65,7 @@
           
 		  "background": "#ffd5a0",
         "foreground": "#111111",
-		  "template": "<parentBackground,background>\ue0bc</>-><background,foreground>\ue0b0</>"
+		  "template": "<parentBackground,background>\ue0bc</> {{ if .Root }}#{{ else }}${{ end }} <background,foreground>\ue0b0</>"
         }
         
       ],
