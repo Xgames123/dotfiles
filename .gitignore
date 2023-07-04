@@ -9,6 +9,8 @@
 !.nanorc
 !.gitignore
 !.gitconfig
+!.tofi-menu
+!.dwlinit
 
 !.dotfiles
 !.dotfiles/scripts

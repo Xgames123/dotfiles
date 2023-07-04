@@ -20,3 +20,11 @@ fi
 if [ -r $HOME/.profile.local ] ; then
    source $HOME/.profile.local
 fi
+
+
+# Start window manager when on tty 1
+if [ "$(tty)" = "/dev/tty1" ] ; then
+   if type dwl > /dev/null ; then
+      dwl -s $HOME/.dwlinit
+   fi
+fi

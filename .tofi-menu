@@ -1,0 +1,12 @@
+# format name:command for tofi-menu to get the program commands from
+
+# Power settings
+poweroff :foot -F sh -c "sudo poweroff"  # Use foot here to make the sudo password field show up
+reboot   :foot -F sh -c "sudo reboot"
+
+# Other programs
+firefox  :firefox
+foot     :foot
+discord  :firefox-noui https://discord.com/login
+inkscape :inkscape
+#krita    :krita

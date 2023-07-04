@@ -1,0 +1,4 @@
+# Init script that is run when dwl starts up
+
+fnott
+somebar < &0
