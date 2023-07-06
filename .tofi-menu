@@ -10,3 +10,5 @@ foot     :foot
 discord  :firefox-noui https://discord.com/login
 inkscape :inkscape
 #krita    :krita
+geany    :geany
+emacs    :emacs
