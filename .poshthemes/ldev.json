@@ -5,24 +5,29 @@
    {
       "alignment": "right",
       "segments": [
-		{
+	    {
 		  "type": "git",
-		  "style": "plain",
+		  "style": "diamond",
+		  "leading_diamond": "\ue0b6",
+		  "trailing_diamond": "\ue0b4",
+
 		  "background": "#605040",
         "foreground": "#00aa6b0",
 		  "foreground_templates": [
          "{{ if or .Working.Changed .Staging.Changed }}#ff6040{{ end }}"
 		  ],
-		  "template": "<background,transparent>\ue0b6</> \ue725 {{ .Ref }}{{ if gt .Ahead 0 }} {{ .Ahead }}\ueaa1{{ end }}{{ if gt .Behind 0 }} {{ .Behind }}\uea9a{{ end }}{{ if .Working.Changed }} | \uf044 {{ .Working.String }}{{ end }}{{ if .Staging.Changed }} | \uf046 {{ .Staging.String }}{{ end }} ",
+		  "template": " \ue725 {{ .Ref }}{{ if gt .Ahead 0 }} {{ .Ahead }}\ueaa1{{ end }}{{ if gt .Behind 0 }} {{ .Behind }}\uea9a{{ end }}{{ if .Working.Changed }} | \uf044 {{ .Working.String }}{{ end }}{{ if .Staging.Changed }} | \uf046 {{ .Staging.String }}{{ end }} ",
 		  "properties": {
 			"fetch_status": true
 		  }
 		},
 		{
 		  "type": "path",
-		  "style": "plain",
+		  "style": "diamond",
+		  "leading_diamond": " \ue0b6",
+		  "trailing_diamond": "\ue0b4",
 		  
-		  "template":"<parentBackground,background>\ue0bc</> \ue5ff {{ .Path }}<background,transparent>\ue0b4</>",
+		  "template":" {{.UserName}}@{{.HostName}} \ue5ff {{ .Path }} ",
 		  "background": "#ffd5a0",
 		  "foreground": "#111111",
 		  "properties": {
@@ -37,17 +42,16 @@
       "alignment": "left",
       "newline": true,
       "segments": [
-        {
-		  "type":"os",
-		  "style": "plain",
+      {
+         "type":"os",
+         "style":"plain",
+         "foreground": "#111111",
+		   "background": "#ffd5a0",
 		  
-		  "background": "#ffd5a0",
-		  "foreground": "#111111",
-		  "properties": {
-		  },
-		  
-		  "template": "<background,transparent>\ue0b6</> {{ .Icon }} {{.Shell}} "
-	    },
+		   "properties": {
+		   },
+		   "template":"<background,transparent>\ue0b6</> {{.Icon}} {{.Shell}} "
+      },
         {
 		  "type": "path",
 		  "style": "plain",
