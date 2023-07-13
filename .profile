@@ -25,6 +25,7 @@ fi
 # Start window manager when on tty 1
 if [ "$(tty)" = "/dev/tty1" ] ; then
    if type dwl > /dev/null ; then
-      dwl -s 'somebar'
+      echo "" > /tmp/dwl.log # clear log file
+      dwl -s 'somebar' &>> /tmp/dwl.log
    fi
 fi
