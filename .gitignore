@@ -26,6 +26,8 @@
 !.config/tofi/config
 !.config/fnott/*
 !.config/fnott/fnott.ini
+!.config/xdg-desktop-portal-wlr/*
+!.config/xdg-desktop-portal-wlr/config
 
 !.poshthemes
 !.poshthemes/*

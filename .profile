@@ -1,5 +1,6 @@
 # a .rc for all shells that are bash like
 
+export XDG_CURRENT_DESKTOP=wlroots
 export GPG_TTY=$(tty)
 export GCM_CREDENTIAL_STORE=gpg
 
