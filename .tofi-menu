@@ -4,6 +4,8 @@
 poweroff :foot -F sh -c "sudo poweroff"  # Use foot here to make the sudo password field show up
 reboot   :foot -F sh -c "sudo reboot"
 
+screenshot: screenshot
+
 # Other programs
 firefox  :firefox
 foot     :foot
