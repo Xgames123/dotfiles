@@ -1,5 +1,5 @@
  [credential "https://github.com"]
-  helper = gh-login -b 'cache --timeout=3600'
+  helper = gh-login -b 'cache --timeout=86400' ; cache credentials for 1 day
 
 [user]
 	email = ldev@ldev.eu.org
