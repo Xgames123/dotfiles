@@ -2,7 +2,7 @@
 dotfiles that I use for arch linux but they should work on other oses
 
 ## Installing
-IMPORTANT: I think your old dotfiles get overwriten when you install the new ones so MAKE A BACKUP OF YOUR OLD DOTFILES
+IMPORTANT: Your old dotfiles get overwriten when you install the new ones so MAKE A BACKUP OF YOUR OLD DOTFILES
 
 ### linux install
 run

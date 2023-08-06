@@ -1,5 +1,5 @@
-[credential "https://github.com"]
-	helper = gh-login -b 'cache --timeout=3600'
+ [credential "https://github.com"]
+  helper = gh-login -b 'cache --timeout=3600'
 
 [user]
 	email = ldev@ldev.eu.org
@@ -14,3 +14,5 @@
 	pl = pull
 	a = add
 	out = !"sudo poweroff"
+[init]
+	defaultBranch = main

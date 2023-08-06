@@ -4,8 +4,8 @@ export XDG_CURRENT_DESKTOP=wlroots
 export GPG_TTY=$(tty)
 export GCM_CREDENTIAL_STORE=gpg
 
-export EDITOR=nano
-export SUDO_EDITOR=rnano
+export EDITOR=nvim
+#export SUDO_EDITOR=rnano
 
 export POSH_THEMES_PATH=$HOME/.poshthemes
 

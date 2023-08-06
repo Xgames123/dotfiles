@@ -1,7 +1,11 @@
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
-bindkey -e #emacs like keybindings
+bindkey -v # vim keybinds
+bindkey "^H" vi-backward-char
+bindkey "^L" vi-forward-char
+bindkey "^K" up-line-or-history 
+bindkey "^J" down-line-or-history 
 
 # Plugins
 export ZSH_PLUGIN_PATH=/usr/share/zsh/plugins

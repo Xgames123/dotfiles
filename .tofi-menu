@@ -12,7 +12,5 @@ foot     :foot
 term     :foot
 discord  :firefox-noui https://discord.com/login
 inkscape :inkscape
-#krita    :krita
-geany    :geany
-emacs    :foot sh -c emacs
 nvim     :foot sh -c nvim
+#krita    :krita
