@@ -1,11 +1,16 @@
- [credential "https://github.com"]
+[credential "https://github.com"]
   helper = gh-login -b 'cache --timeout=86400' ; cache credentials for 1 day
+  helper = manager
+
 
 [user]
 	email = ldev@ldev.eu.org
 	name = ldev
 [pull]
 	rebase = true
+[core]
+	autocrlf = false
+	eol = lf
 [alias]
 	s = status
 	ca = commit -a

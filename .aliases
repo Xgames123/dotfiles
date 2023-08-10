@@ -8,5 +8,5 @@ alias lsla="ls -l -a --color=auto"
 alias edit="$EDITOR"
 
 # dotfiles
-alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/git/ --work-tree=$HOME'
+alias dot='git --git-dir=$HOME/.dotfiles/git/ --work-tree=$HOME'
 
