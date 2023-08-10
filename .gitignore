@@ -15,6 +15,7 @@
 
 !.dotfiles
 !.dotfiles/scripts
+!.dotfiles/scripts/*
 
 !.config
 !.config/*
