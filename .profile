@@ -4,10 +4,21 @@ export XDG_CURRENT_DESKTOP=wlroots
 export GPG_TTY=$(tty)
 export GCM_CREDENTIAL_STORE=gpg
 
-export EDITOR=nvim
-#export SUDO_EDITOR=rnano
+if type nvim > /dev/null ; then
+  export EDITOR=nvim
+elif type vim > /dev/null ; then
+  export EDITOR=vim
+elif type vi > /dev/null ; then
+  export EDITOR=vi
+elif type nano > /dev/null ; then
+  export EDITOR=nano
+  if type rnano > /dev/null ; then
+  export SUDO_EDITOR=rnano
+  fi
+fi
 
 export POSH_THEMES_PATH=$HOME/.poshthemes
+export POSH_THEME=$POSH_THEMES_PATH/ldev2.json
 
 if [ -r $HOME/.cargo/env ] ; then
    source $HOME/.cargo/env

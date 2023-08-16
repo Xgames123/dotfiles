@@ -1,0 +1,89 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "console_title_template": "{{.Shell}}: {{.Folder}}",
+  "final_space":true,
+  "version": 2,
+  "var":{
+  },
+
+  "blocks": [
+    {
+      "alignment": "left",
+      "type": "prompt",
+      "newline": false,
+      "segments": [
+        {
+           "type":"text",
+           "style":"plain",
+           "foreground": "#555555",
+           "properties": {
+           },
+           "template":"╭(<#ffd5a0>{{ .UserName }}</><#555555>@</><#ffd5a0>{{ .HostName }}</>)"
+        }
+      ]
+    },
+    {
+      "alignment": "right",
+      "newline": false,
+      "type": "prompt",
+      "filler": "─",
+      "segments": [
+        {
+          "type": "path",
+          "style": "plain",
+          "foreground": "#555555",
+          
+          "template":"[ <#ffd5a0> {{ .Path }}</> ]",
+          "properties": {
+            "style": "full"
+          }
+        },
+        {
+          "type": "git",
+          "style": "plain",
+          "foreground": "#555555",
+          "template": "[ <#ffd5a0>{{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}</> ]", 
+          "properties": {
+          "fetch_status": true
+          }
+        }
+      ]
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "type": "prompt",
+      "segments": [
+        {
+          "type": "path",
+          "style": "plain",
+          "foreground": "#555555",
+
+          "template":"╰[ <#ffd5a0> {{ .Path }}</> ]",
+          "properties": {
+          "style": "folder"
+          }
+        },
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "#555555",
+
+          "template":" <#ffd5a0>{{ if .Root }}#{{ else }}${{ end }}</>",
+          "properties": {
+          "style": "folder"
+          }
+        }
+      ]
+    }
+    
+
+    
+  ],
+  "secondary_prompt": {
+    "background": "transparent",
+    "foreground": "#ffd5a0",
+    "template": ">"
+  }
+}
+  

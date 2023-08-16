@@ -61,5 +61,5 @@ fi
 
 
 if type "oh-my-posh" > /dev/null ; then
-   eval "$(oh-my-posh init zsh --config $POSH_THEMES_PATH/ldev.json)"
+   eval "$(oh-my-posh init zsh --config $POSH_THEME)"
 fi
