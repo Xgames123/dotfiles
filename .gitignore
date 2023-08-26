@@ -18,7 +18,6 @@
 !.dotfiles/scripts/*
 
 !.config
-!.config/*
 !.config/neofetch/*
 !.config/neofetch/config.conf
 !.config/foot/*

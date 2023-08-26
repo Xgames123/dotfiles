@@ -6,7 +6,17 @@ bindkey "^H" vi-backward-char
 bindkey "^L" vi-forward-char
 bindkey "^K" up-line-or-history 
 bindkey "^J" down-line-or-history 
+bindkey "^a" vi-first-non-blank
+bindkey "^e" vi-end-of-line
 
+editcmd ()
+{
+ echo "$BUFFER" > /tmp/buffer.sh
+ $EDITOR /tmp/buffer.sh
+ BUFFER=$(cat /tmp/buffer.sh)
+}
+zle -N editcmd
+bindkey "^n" editcmd
 # Plugins
 export ZSH_PLUGIN_PATH=/usr/share/zsh/plugins
 

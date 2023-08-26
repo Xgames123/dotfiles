@@ -14,8 +14,8 @@
 	eol = lf
 [alias]
 	s = status
-	ca = commit -a
-	c = commit
+	ca = commit -a -m
+	c = commit -m
 	pu = push
 	pl = pull
 	a = add
