@@ -16,7 +16,8 @@ editcmd ()
  BUFFER=$(cat /tmp/buffer.sh)
 }
 zle -N editcmd
-bindkey "^n" editcmd
+bindkey "^xe" editcmd
+bindkey -M vicmd " e" editcmd
 # Plugins
 export ZSH_PLUGIN_PATH=/usr/share/zsh/plugins
 
