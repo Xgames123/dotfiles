@@ -1,0 +1,18 @@
+# format name:command for sysmenu to get the program commands from
+
+# Window manager 
+poweroff    :echo 'poweroff' > /tmp/dwl_action && /bin/kill -s SIGTERM $(pgrep dwl)
+reboot      :echo 'reboot' > /tmp/dwl_action && /bin/kill -s SIGTERM $(pgrep dwl)
+wmexitshell :echo 'shell' > /tmp/dwl_action && /bin/kill -s SIGTERM $(pgrep dwl)
+wmexit      :echo 'exit' > /tmp/dwl_action && /bin/kill -s SIGTERM $(pgrep dwl)
+
+screenshot: screenshot
+
+# Other programs
+firefox  :firefox
+foot     :foot
+term     :foot
+discord  :firefox-noui https://discord.com/login
+inkscape :inkscape
+nvim     :foot sh -c nvim
+#krita    :krita

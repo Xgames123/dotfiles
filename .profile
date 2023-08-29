@@ -17,6 +17,12 @@ elif type nano > /dev/null ; then
   fi
 fi
 
+# bemenu
+export BEMENU_SCALE="3"
+export BEMENU_OPTS="--center --fn JetBrainsMonoNerdFont --list 10 -W 0.15 --fixed-height --border 2 --no-spacing --binding vim --cw 1 --bdr #ffd5a0 --tb #ffd5a0 --tf #111111 --nf #EEEEEE --nb #111111 --hf #ffd5a0 --hb #222222"
+
+
+
 export POSH_THEMES_PATH=$HOME/.poshthemes
 export POSH_THEME=$POSH_THEMES_PATH/ldev2.json
 
@@ -33,6 +39,13 @@ if [ -r $HOME/.profile.local ] ; then
    source $HOME/.profile.local
 fi
 
+editenv ()
+{
+  BUFFER_FILE=/tmp/editenv_buffer 
+  echo $(eval "echo \$$1 > \$BUFFER_FILE")
+  $EDITOR $BUFFER_FILE
+  export $1="$(cat $BUFFER_FILE)"
+}
 
 # Start window manager when on tty 1
 if [ "$(tty)" = "/dev/tty1" ] ; then
@@ -42,6 +55,7 @@ if [ "$(tty)" = "/dev/tty1" ] ; then
       dwl -s 'somebar' &>> /tmp/dwl.log
       action="$(cat /tmp/dwl_action)"
       echo "action: $action"
+      echo ""
       if [ "$action" = "poweroff" ] ; then
         sudo poweroff
       elif [ "$action" = "reboot" ] ; then

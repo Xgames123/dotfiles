@@ -1,6 +1,6 @@
 [credential "https://github.com"]
   username = Xgames123
-  helper = gh-login -b 'cache --timeout=86400' ; cache credentials for 1 day
+  helper = gh-login -b '/usr/bin/pass-git-helper'
   helper = manager
 
 
