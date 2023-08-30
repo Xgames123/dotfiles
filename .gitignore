@@ -1,4 +1,5 @@
-*
+/*
+.dotfiles/git
 !README.md
 
 !.zshrc
@@ -19,6 +20,7 @@
 
 !.config
 !.config/*
+.config/[0-9][0-9][0-9]*/
 !.config/neofetch/*
 !.config/neofetch/config.conf
 !.config/foot/*
@@ -39,3 +41,4 @@
 
 # Windows
 !.psrc.ps1
+!.dotfiles/win
