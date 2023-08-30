@@ -3,8 +3,8 @@
 # Window manager 
 poweroff    :echo 'poweroff' > /tmp/dwl_action && /bin/kill -s SIGTERM $(pgrep dwl)
 reboot      :echo 'reboot' > /tmp/dwl_action && /bin/kill -s SIGTERM $(pgrep dwl)
-wmexitshell :echo 'shell' > /tmp/dwl_action && /bin/kill -s SIGTERM $(pgrep dwl)
-wmexit      :echo 'exit' > /tmp/dwl_action && /bin/kill -s SIGTERM $(pgrep dwl)
+exit :echo 'shell' > /tmp/dwl_action && /bin/kill -s SIGTERM $(pgrep dwl)
+restart :echo 'exit' > /tmp/dwl_action && /bin/kill -s SIGTERM $(pgrep dwl)
 
 screenshot: screenshot
 
@@ -15,4 +15,5 @@ term     :foot
 discord  :firefox-noui https://discord.com/login
 inkscape :inkscape
 nvim     :foot sh -c nvim
+vieb     :vieb --enable-features=UseOzonePlatform --ozone-platform=wayland
 #krita    :krita
