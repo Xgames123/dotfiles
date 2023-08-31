@@ -1,7 +1,9 @@
 /*
 .dotfiles/git
+!.dotfiles/scripts
 !README.md
 
+# dotfiles
 !.zshrc
 !.bashrc
 !.aliases
@@ -13,31 +15,18 @@
 !.sysmenu
 !.viebrc
 
+# Directories
 !.spacemacs
-
-!.dotfiles
-!.dotfiles/scripts
-!.dotfiles/scripts/*
-
-!.config
-!.config/*
-.config/[0-9][0-9][0-9]*/
-!.config/neofetch/*
-!.config/neofetch/config.conf
-!.config/foot/*
-!.config/foot/foot.ini
-!.config/tofi/*
-!.config/tofi/config
-!.config/fnott/*
-!.config/fnott/fnott.ini
-!.config/xdg-desktop-portal-wlr/*
-!.config/xdg-desktop-portal-wlr/config
-!.config/pass-git-helper/*
-!.config/pass-git-helper/git-pass-mapping.ini 
-
 !.poshthemes
-!.poshthemes/*
-!.poshthemes/ldev.json
+
+# .config
+!.config
+.config/inkscape
+.config/[0-9][0-9][0-9]*/
+.config/systemd
+.config/dconf
+.config/pulse
+.config/Vieb
 
 
 # Windows
