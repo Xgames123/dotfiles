@@ -1,0 +1,30 @@
+# keybinds
+imap jk <esc>  
+vmap jk <esc>  
+emap jk <esc>  
+cmap jk <esc>  
+smap jk <esc>  
+fmap jk <esc>  
+pmap jk <esc>  
+
+nmap <C-i> <insertAtFirstInput>
+
+cmap <C-x>e <editWithVim>
+emap <C-x>e <editWithVim>
+imap <C-x>e <editWithVim>
+smap <C-x>e <editWithVim>
+
+imap <C-h> <left>
+
+nmap <C-à> <zoomReset>
+
+# buffer scrolling
+nmap <A-&> <:buffer 0>
+nmap <A-é> <:buffer 1>
+nmap <A-"> <:buffer 2>
+nmap <A-'> <:buffer 3>
+nmap <A-(> <:buffer 4>
+nmap <A-§> <:buffer 5>
+nmap <A-è> <:buffer 6>
+nmap <A-!> <:buffer 7>
+nmap <A-ç> <:buffer 9>
