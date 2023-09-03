@@ -1,0 +1,6 @@
+RUN OFF
+REM Aug 31 MSG test
+REM AUG 31 MSG test 2
+REM SEP 1 +3 MSG first school day (%b) 
+REM Aug 31 SPECIAL COLOR 0 128 0 This is a dark green reminder
+REM Aug 31 SPECIAL COLOR 255 0 0 This is a dark green reminder

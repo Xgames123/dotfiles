@@ -9,6 +9,8 @@
 !.aliases
 !.commonrc
 !.profile
+!.wmrc
+!.dwlrc
 !.nanorc
 !.gitignore
 !.gitconfig
@@ -21,6 +23,7 @@
 
 # .config
 !.config
+.config/nvim
 .config/inkscape
 .config/[0-9][0-9][0-9]*/
 .config/systemd

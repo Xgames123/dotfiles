@@ -1,4 +1,4 @@
-[credential "https://github.com"]
+[credential "https://github.com/Xgames123"]
   username = Xgames123
   helper = gh-login -b '/usr/bin/pass-git-helper'
   helper = manager
@@ -22,3 +22,5 @@
 	out = !"sudo poweroff"
 [init]
 	defaultBranch = main
+[credentials]
+	useHttpPath = true

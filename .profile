@@ -49,19 +49,5 @@ editenv ()
 
 # Start window manager when on tty 1
 if [ "$(tty)" = "/dev/tty1" ] ; then
-   if type dwl > /dev/null ; then
-      echo "" > /tmp/dwl.log # clear log file
-      echo "" > /tmp/dwl_action 
-      dwl -s 'somebar' &>> /tmp/dwl.log
-      action="$(cat /tmp/dwl_action)"
-      echo "action: $action"
-      echo ""
-      if [ "$action" = "poweroff" ] ; then
-        sudo poweroff
-      elif [ "$action" = "reboot" ] ; then
-        sudo reboot
-      elif [ "$action" = "exit" ] ; then
-        exit
-      fi
-   fi
+  source .wmrc
 fi

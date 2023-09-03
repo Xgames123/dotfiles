@@ -1,0 +1,34 @@
+# rc file for initializing the window manager
+
+
+function start_dwl(){
+  export XDG_CURRENT_DESKTOP=wlroots # xdg-desktop-portal
+  export XDG_SESSION_DESKTOP=wlroots # systemd
+  export XDG_SESSION_TYPE=wayland # xdg/systemd
+  echo "" > /tmp/dwl.log # clear log file
+  dwl -s 'somebar' &>> /tmp/dwl.log
+}
+
+if type dwl > /dev/null ; then
+  start_dwl
+fi
+
+echo "" > /tmp/wm_exit_action
+
+action="$(cat /tmp/wm_exit_action)"
+echo "action: $action"
+echo ""
+if [ "$action" = "poweroff" ] ; then
+  clear
+  echo "powering off..."
+  sudo poweroff
+elif [ "$action" = "reboot" ] ; then
+  clear
+  echo "rebooting..."
+  sudo reboot
+elif [ "$action" = "exit" ] ; then
+  clear
+  echo "exiting"
+  sudo kill $PPID 
+fi
+
