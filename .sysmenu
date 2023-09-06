@@ -1,10 +1,10 @@
 # format name:command for sysmenu to get the program commands from
 
 # Window manager 
-poweroff    :echo 'poweroff' > /tmp/dwl_action && /bin/kill -s SIGTERM $(pgrep dwl)
-reboot      :echo 'reboot' > /tmp/dwl_action && /bin/kill -s SIGTERM $(pgrep dwl)
-exit :echo 'shell' > /tmp/dwl_action && /bin/kill -s SIGTERM $(pgrep dwl)
-restart :echo 'exit' > /tmp/dwl_action && /bin/kill -s SIGTERM $(pgrep dwl)
+poweroff :wmaction poweroff
+reboot   :wmaction reboot
+exit     :wmaction shell
+restart  :wmaction exit
 
 screenshot: screenshot
 

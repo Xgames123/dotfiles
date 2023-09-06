@@ -6,14 +6,16 @@ function start_dwl(){
   export XDG_SESSION_DESKTOP=wlroots # systemd
   export XDG_SESSION_TYPE=wayland # xdg/systemd
   echo "" > /tmp/dwl.log # clear log file
+  echo "dwl" > /tmp/wm
   dwl -s 'somebar' &>> /tmp/dwl.log
 }
+
+echo "" > /tmp/wm_exit_action
+echo "" > /tmp/wm
 
 if type dwl > /dev/null ; then
   start_dwl
 fi
-
-echo "" > /tmp/wm_exit_action
 
 action="$(cat /tmp/wm_exit_action)"
 echo "action: $action"
@@ -29,6 +31,6 @@ elif [ "$action" = "reboot" ] ; then
 elif [ "$action" = "exit" ] ; then
   clear
   echo "exiting"
-  sudo kill $PPID 
+  exit
 fi
 
