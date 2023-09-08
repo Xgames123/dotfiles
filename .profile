@@ -19,9 +19,14 @@ fi
 
 # bemenu
 export BEMENU_SCALE="3"
-export BEMENU_OPTS="--center --fn JetBrainsMonoNerdFont --list 10 -W 0.15 --fixed-height --border 2 --no-spacing --cw 1 --bdr #ffd5a0 --tb #ffd5a0 --tf #111111 --nf #EEEEEE --nb #111111 --hf #ffd5a0 --hb #222222"
+export BEMENU_OPTS="--center --fn JetBrainsMonoNerdFont --list 10 -W 0.15 --fixed-height --border 2 --no-spacing --cw 1 --bdr #ffd5a0 --tb #ffd5a0 --tf #111111 --nf #EEEEEE --nb #111111 --hf #ffd5a0 --hb #333333"
 
+# firefox
+export MOZ_ENABLE_WAYLAND=1
 
+# qt
+export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+export QT_QPA_PLATFORM=xcb
 
 export POSH_THEMES_PATH=$HOME/.poshthemes
 export POSH_THEME=$POSH_THEMES_PATH/ldev2.json

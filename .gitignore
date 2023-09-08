@@ -16,6 +16,7 @@
 !.gitconfig
 !.sysmenu
 !.viebrc
+!.vrrc
 
 # Directories
 !.spacemacs
@@ -30,7 +31,11 @@
 .config/dconf
 .config/pulse
 .config/Vieb
-
+.config/menus
+.config/Valve
+.config/openxr
+.config/openvr
+.config/discord
 
 # Windows
 !.psrc.ps1

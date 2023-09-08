@@ -12,8 +12,11 @@ screenshot: screenshot
 firefox  :firefox
 foot     :foot
 term     :foot
-discord  :firefox-noui https://discord.com/login
 inkscape :inkscape
 nvim     :foot sh -c nvim
+discord  :discord
 vieb     :vieb --enable-features=UseOzonePlatform --ozone-platform=wayland
+qutebrowser: qutebrowser
+steam    :steam
+alvr_dash:alvr_dashboard
 #krita    :krita
