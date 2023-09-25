@@ -37,7 +37,7 @@
 .config/openvr
 .config/discord
 .config/qalculate
-.config/qutebrowser/
+.config/qutebrowser/__pycache__
 
 # Windows
 !.psrc.ps1
