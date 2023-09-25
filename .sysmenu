@@ -1,18 +1,22 @@
 # format name:command for sysmenu to get the program commands from
 
 # Window manager 
-poweroff :wmaction poweroff
-reboot   :wmaction reboot
-exit     :wmaction shell
-restart  :wmaction exit
+poweroff:wmaction poweroff
+reboot  :wmaction reboot
+exit    :wmaction shell
+logout  :wmaction exit
 
+# utils
 screenshot: screenshot
+fnottmgr: nfottmgr
 
 # Other programs
 firefox  :firefox
 foot     :foot
 term     :foot
+shell    :foot
 inkscape :inkscape
+gimp     :gimp
 nvim     :foot sh -c nvim
 discord  :discord
 vieb     :vieb --enable-features=UseOzonePlatform --ozone-platform=wayland

@@ -152,7 +152,7 @@ config.set('content.local_content_can_access_remote_urls', True, 'file:///home/l
 config.set('content.local_content_can_access_file_urls', False, 'file:///home/ldev/.local/share/qutebrowser/userscripts/*')
 
 # dark mode
-config.set("colors.webpage.darkmode.enabled", True)
+config.set("colors.webpage.preferred_color_scheme", "dark")
 
 # vertical tabs
 config.set("tabs.position", "left")

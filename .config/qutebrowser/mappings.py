@@ -4,6 +4,8 @@ def init(config, c):
     config.bind("jk", "mode-leave", mode="caret");
     config.bind("jk", "mode-leave", mode="hint");
     config.bind("jk", "mode-leave", mode="insert");
+    config.bind("jk", "mode-leave", mode="caret")
+    #config.bind("jk", "mode-leave", mode="visual")
 
     # Insert mode arrows
     config.bind("<Ctrl-j>", "fake-key <Down>", mode="insert")
@@ -13,3 +15,6 @@ def init(config, c):
     
     # Toggle statusbar
     config.bind("<Ctrl-n>", "config-cycle tabs.show always never")
+
+    # Caret mode
+    #config.bind("é", "mode-leave", mode="visual")

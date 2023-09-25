@@ -24,8 +24,8 @@
 
 # .config
 !.config
-.config/nvim
 .config/inkscape
+!.config/inkscape/templates
 .config/[0-9][0-9][0-9]*/
 .config/systemd
 .config/dconf
@@ -36,6 +36,8 @@
 .config/openxr
 .config/openvr
 .config/discord
+.config/qalculate
+.config/qutebrowser/
 
 # Windows
 !.psrc.ps1

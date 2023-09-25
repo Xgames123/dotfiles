@@ -15,6 +15,7 @@ echo "" > /tmp/wm
 
 if type dwl > /dev/null ; then
   start_dwl
+# The rest is don in .dwlrc
 fi
 
 action="$(cat /tmp/wm_exit_action)"
