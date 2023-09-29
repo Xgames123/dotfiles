@@ -1,6 +1,6 @@
 # rc file for initializing the window manager
 
-DWL_BAR="dwlproxy"
+DWL_BAR=""
 
 function start_dwl(){
   export XDG_CURRENT_DESKTOP=wlroots # xdg-desktop-portal
@@ -8,8 +8,9 @@ function start_dwl(){
   export XDG_SESSION_TYPE=wayland # xdg/systemd
   echo "" > /tmp/dwl.log # clear log file
   echo "dwl" > /tmp/wm
+  dwl &>> /tmp/dwl.log
   #dwl -s '$DWL_BAR' &>> /tmp/dwl.log
-  dwl -s dwlproxy
+  #dwl -s dwlproxy
   #dwl > ~/.cache/dwltags
 }
 

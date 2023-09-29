@@ -24,4 +24,5 @@ qutebrowser: qutebrowser
 steam    :steam
 alvr_dash:alvr_dashboard
 htop     :foot sh -c htop
+yambar   :yambar
 #krita    :krita
