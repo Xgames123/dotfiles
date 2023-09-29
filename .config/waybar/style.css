@@ -1,0 +1,23 @@
+* {
+  /* `otf-font-awesome` is required to be installed for icons */
+  font-family: JetBrainsMonoNerdFont;
+  font-size: 15px;
+}
+window#waybar {
+  background: transparent;
+  color: #ffd5a0;
+}
+window > *{
+  padding-top: 7px;
+}
+
+#custom-windowtitle {
+  font-weight: bold;
+  background-color: #222222;
+  padding: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: solid 2px #333333;
+}
+
+

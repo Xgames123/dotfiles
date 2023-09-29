@@ -23,7 +23,7 @@
       ]
     },
     {
-      "alignment": "right",
+      "alignment": "left",
       "newline": false,
       "type": "prompt",
       "filler": "─",
@@ -33,7 +33,7 @@
           "style": "plain",
           "foreground": "#555555",
           
-          "template":"[ <#ffd5a0> {{ .Path }}</> ]",
+          "template":"-[ <#ffd5a0> {{ .Path }}</> ]",
           "properties": {
             "style": "full"
           }

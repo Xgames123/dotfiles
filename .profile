@@ -19,7 +19,7 @@ fi
 
 # bemenu
 export BEMENU_SCALE="2"
-export BEMENU_OPTS="--center --fn JetBrainsMonoNerdFont --list 20 -W 0.4 --fixed-height --border 2 --no-spacing --cw 1 --bdr #ffd5a0 --tb #ffd5a0 --tf #111111 --nf #EEEEEE --nb #111111 --hf #111111 --hb #ffd5a0"
+export BEMENU_OPTS="--center --fn JetBrainsMonoNerdFont --list 20 -W 0.4 --fixed-height --border 2 --no-spacing --cw 1 --bdr #ffd5a0 --tb #ffd5a0 --tf #222222 --nf #EEEEEE --nb #222222 --ab #111111 --hf #222222 --hb #ffd5a0"
 
 # firefox
 export MOZ_ENABLE_WAYLAND=1

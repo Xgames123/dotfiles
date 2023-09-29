@@ -1,0 +1,22 @@
+{
+    "layer": "bottom",
+    "modules-left": ["dwl/tags"],
+    "modules-center": ["custom/windowtitle"],
+    "modules-right": ["tray", "clock"],
+    "clock": {
+        "format": " {:%a, %d. %b  %I:%M}",
+    },
+    "dwl/tags":{
+    },
+    "custom/windowtitle":{
+      "format":"zsh: dwl",
+    },
+    "custom/dwlbar": {
+        "format": "{}",
+        "max-length": 500,
+        "return-type": "json",
+        "escape": true,
+        "exec": "$HOME/.config/waybar/dwlbar.sh"
+    } ,
+
+}

@@ -1,7 +1,7 @@
 [screencast]
 #output_name=HDMI-A-1
 #max_fps=30
-exec_before=notify-send -a xdg-desktop-portal-wlr "Sharing screen"
-exec_after=notify-send -a xdg-desktop-portal-wlr "Stopped screen sharing"
+exec_before=notify-send -a xdg-desktop-portal-wlr "Sharing screen" ; echo "true" > ~/.cache/screenshare
+exec_after=notify-send -a xdg-desktop-portal-wlr "Stopped screen sharing" ; echo "false" > ~/.cache/screenshare
 chooser_type=none
 #chooser_cmd=bemenu

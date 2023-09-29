@@ -36,6 +36,7 @@
 .config/openxr
 .config/openvr
 .config/discord
+.config/GIMP
 .config/qalculate
 .config/qutebrowser/__pycache__
 

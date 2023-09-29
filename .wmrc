@@ -1,5 +1,6 @@
 # rc file for initializing the window manager
 
+DWL_BAR="dwlproxy"
 
 function start_dwl(){
   export XDG_CURRENT_DESKTOP=wlroots # xdg-desktop-portal
@@ -7,7 +8,9 @@ function start_dwl(){
   export XDG_SESSION_TYPE=wayland # xdg/systemd
   echo "" > /tmp/dwl.log # clear log file
   echo "dwl" > /tmp/wm
-  dwl -s 'somebar' &>> /tmp/dwl.log
+  #dwl -s '$DWL_BAR' &>> /tmp/dwl.log
+  dwl -s dwlproxy
+  #dwl > ~/.cache/dwltags
 }
 
 echo "" > /tmp/wm_exit_action
@@ -15,7 +18,7 @@ echo "" > /tmp/wm
 
 if type dwl > /dev/null ; then
   start_dwl
-# The rest is don in .dwlrc
+# The rest is done in .dwlrc
 fi
 
 action="$(cat /tmp/wm_exit_action)"

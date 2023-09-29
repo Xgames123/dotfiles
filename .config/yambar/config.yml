@@ -1,0 +1,225 @@
+bar:
+  height: 50
+  location: top
+  background: 00000000
+  font: JetBrainsMonoNerdFont:pixelsize=30
+  foreground: ffd5a0ff
+  spacing: 10
+  left:
+    - dwl:
+        number-of-tags: 9
+        dwl-info-filename: /tmp/dwltags
+        content:
+          map:
+            default:
+              string:
+                text: "{name}"
+                margin: 10
+                foreground: 444444ff
+                deco:
+                  stack:
+                    - background: {color: 222222ff}
+                    - border:
+                        color: 333333ff
+                        size: 3
+            conditions:
+              id == 0:
+                list:
+                  spacing: 10
+                  items:
+                    - string:
+                        text: "{layout}"
+                        margin: 10
+                        deco:
+                          stack:
+                            - background: {color: 222222ff}
+                            - border:
+                                color: 333333ff
+                                size: 3
+                    - map:
+                        default:
+                          string:
+                            text: ""
+                        conditions:
+                          appid != "":
+                              string:
+                                  text: "{appid} ({title})"
+                                  foreground: BBBBBBff
+                                  margin: 10
+                                  deco:
+                                    stack:
+                                      - background: {color: 222222ff}
+                                      - border:
+                                          color: 333333ff
+                                          size: 3
+              urgent:
+                string:
+                  margin: 10
+                  text: "{name}"
+                  foreground: 444444ff
+                  deco:
+                    stack:
+                      - background: {color: ffd5a0ff}
+                      - border:
+                          color: 333333ff
+                          size: 3
+              selected && ~empty:
+                string:
+                  margin: 10
+                  text: "{name}"
+                  foreground: ffd5a0ff
+                  deco:
+                    stack:
+                      - background: {color: 222222ff}
+                      - border:
+                          color: 333333ff
+                          size: 3
+                      - underline:
+                          color: ffd5a0ff
+                          size: 3
+              ~empty:
+                string:
+                  margin: 10
+                  text: "{name}"
+                  foreground: BBBBBBff
+                  deco:
+                    stack:
+                      - background: {color: 222222ff}
+                      - border:
+                          color: 333333ff
+                          size: 3
+              selected:
+                string:
+                  margin: 10
+                  text: "{name}"
+                  foreground: 444444ff
+                  deco:
+                    stack:
+                      - background: {color: 222222ff}
+                      - border:
+                          color: 333333ff
+                          size: 3
+                      - underline:
+                          color: ffd5a0ff
+                          size: 3
+
+  right:
+    - network:
+        poll-interval: 3000
+        name: "eno2"
+        content:
+          map:
+            default:
+                string:
+                  text: " ({state})"
+                  foreground: e04040ff
+                  margin: 10
+                  deco: 
+                    stack: 
+                      - background: {color: 222222ff}
+                      - border: 
+                          color: 333333ff
+                          size: 3
+            conditions:
+              state == up:
+                list:
+                  items:
+                    - string:
+                        text: " {ul-speed:mib}MiB/s"
+                        margin: 10
+                        deco: 
+                          stack: 
+                            - background: {color: 222222ff}
+                            - border: 
+                                color: 333333ff
+                                size: 3
+                    - string:
+                        text: " {dl-speed:mib}MiB/s"
+                        margin: 10
+                        deco: 
+                          stack: 
+                            - background: {color: 222222ff}
+                            - border: 
+                                color: 333333ff
+                                size: 3
+    - mem:
+        poll-interval: 3000
+        content:
+          string:
+            text: " {used:gib}GiB/{total:gib}GiB"
+            margin: 10
+            deco: 
+              stack: 
+                - background: {color: 222222ff}
+                - border: 
+                    color: 333333ff
+                    size: 3
+    - cpu:
+        poll-interval: 3000
+        content:
+          map:
+            conditions:
+              id == -1:
+                string:
+                  text: " {cpu}%"
+                  margin: 10
+                  deco: 
+                    stack: 
+                      - background: {color: 222222ff}
+                      - border: 
+                          color: 333333ff
+                          size: 3
+
+
+    - label:
+        content:
+          string:
+            margin: 20
+            text: ""
+    - pulse:
+        content:
+          list:
+            spacing: 0
+            items:
+              - string:
+                  text: "󰍬 {source_percent}%"
+                  margin: 10
+                  deco: 
+                    stack: 
+                      - background: {color: 222222ff}
+                      - border: 
+                          color: 333333ff
+                          size: 3
+              - string:
+                  text: "󰕾 {sink_percent}%"
+                  margin: 10
+                  deco: 
+                    stack: 
+                      - background: {color: 222222ff}
+                      - border: 
+                          color: 333333ff
+                          size: 3
+    - clock:
+        time-format: "%I:%M"
+        content:
+          list:
+            spacing: 0
+            items:
+              - string:
+                  text: " {date}"
+                  margin: 10
+                  deco: 
+                    stack: 
+                      - background: {color: 222222ff}
+                      - border: 
+                          color: 333333ff
+                          size: 3
+              - string:
+                  text: " {time}"
+                  margin: 10
+                  deco: 
+                    stack: 
+                      - background: {color: 222222ff}
+                      - border: 
+                          color: 333333ff
+                          size: 3
