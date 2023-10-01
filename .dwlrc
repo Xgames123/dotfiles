@@ -1,19 +1,19 @@
 # Gets run when dwl starts
 
-WALLPAPER="$HOME/Pictures/Wallpapers/arch1.png"
-BAR="yambar"
+echo "DWL_BAR: $DWL_BAR"
+echo "DWL_WALLPAPER: $DWL_WALLPAPER"
 
 systemctl --user import-environment XDG_CURRENT_DESKTOP XDG_SESSION_DESKTOP XDG_SESSION_TYPE WAYLAND_DISPLAY
 dbus-update-activation-environment --systemd XDG_CURRENT_DESKTOP XDG_SESSION_DESKTOP XDG_SESSION_TYPE WAYLAND_DISPLAY
 systemctl --user restart xdg-desktop-portal &
 
-$BAR &
+$DWL_BAR &
 onedriver $HOME/OneDrive &
 fnott &
 
 # Wait for onedriver to load
-while [ ! -f $WALLPAPER ]; do
+while [ ! -f $DWL_WALLPAPER ]; do
   sleep 1
 done
-swaybg --image $WALLPAPER &
+swaybg --image $DWL_WALLPAPER &
 

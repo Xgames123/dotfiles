@@ -15,10 +15,10 @@
         {
            "type":"text",
            "style":"plain",
-           "foreground": "#555555",
+           "foreground": "darkGray",
            "properties": {
            },
-           "template":"╭(<#ffd5a0>{{ .UserName }}</><#555555>@</><#ffd5a0>{{ .HostName }}</>)"
+           "template":"╭(<white>{{ .UserName }}</><darkGray>@</><white>{{ .HostName }}</>)"
         }
       ]
     },
@@ -31,9 +31,9 @@
         {
           "type": "path",
           "style": "plain",
-          "foreground": "#555555",
+          "foreground": "darkGray",
           
-          "template":"-[ <#ffd5a0> {{ .Path }}</> ]",
+          "template":"-[ <white> {{ .Path }}</> ]",
           "properties": {
             "style": "full"
           }
@@ -41,8 +41,8 @@
         {
           "type": "git",
           "style": "plain",
-          "foreground": "#555555",
-          "template": "[ <#ffd5a0>{{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}</> ]", 
+          "foreground": "darkGray",
+          "template": "[ <white>{{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}</> ]", 
           "properties": {
           "fetch_status": true
           }
@@ -57,9 +57,9 @@
         {
           "type": "path",
           "style": "plain",
-          "foreground": "#555555",
+          "foreground": "darkGray",
 
-          "template":"╰[ <#ffd5a0> {{ .Path }}</> ]",
+          "template":"╰[ <white> {{ .Path }}</> ]",
           "properties": {
           "style": "folder"
           }
@@ -67,9 +67,9 @@
         {
           "type": "text",
           "style": "plain",
-          "foreground": "#555555",
+          "foreground": "darkGray",
 
-          "template":" <#ffd5a0>{{ if .Root }}#{{ else }}${{ end }}</>",
+          "template":" <white>{{ if .Root }}#{{ else }}${{ end }}</>",
           "properties": {
           "style": "folder"
           }
@@ -82,7 +82,7 @@
   ],
   "secondary_prompt": {
     "background": "transparent",
-    "foreground": "#ffd5a0",
+    "foreground": "white",
     "template": ">"
   }
 }
