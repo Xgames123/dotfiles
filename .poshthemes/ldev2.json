@@ -18,7 +18,7 @@
            "foreground": "darkGray",
            "properties": {
            },
-           "template":"╭(<white>{{ .UserName }}</><darkGray>@</><white>{{ .HostName }}</>)"
+           "template":"╭(<yellow>{{ .UserName }}</><darkGray>@</><yellow>{{ .HostName }}</>)"
         }
       ]
     },
@@ -33,7 +33,7 @@
           "style": "plain",
           "foreground": "darkGray",
           
-          "template":"-[ <white> {{ .Path }}</> ]",
+          "template":"-[ <yellow> {{ .Path }}</> ]",
           "properties": {
             "style": "full"
           }
@@ -42,7 +42,7 @@
           "type": "git",
           "style": "plain",
           "foreground": "darkGray",
-          "template": "[ <white>{{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}</> ]", 
+          "template": "[ <yellow>{{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}</> ]", 
           "properties": {
           "fetch_status": true
           }
@@ -59,7 +59,7 @@
           "style": "plain",
           "foreground": "darkGray",
 
-          "template":"╰[ <white> {{ .Path }}</> ]",
+          "template":"╰[ <yellow> {{ .Path }}</> ]",
           "properties": {
           "style": "folder"
           }
@@ -69,7 +69,7 @@
           "style": "plain",
           "foreground": "darkGray",
 
-          "template":" <white>{{ if .Root }}#{{ else }}${{ end }}</>",
+          "template":" <yellow>{{ if .Root }}#{{ else }}${{ end }}</>",
           "properties": {
           "style": "folder"
           }
@@ -82,7 +82,7 @@
   ],
   "secondary_prompt": {
     "background": "transparent",
-    "foreground": "white",
+    "foreground": "yellow",
     "template": ">"
   }
 }

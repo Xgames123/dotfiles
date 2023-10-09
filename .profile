@@ -36,7 +36,7 @@ fi
 
 # bemenu
 export BEMENU_SCALE="2"
-export BEMENU_OPTS="--center --fn JetBrainsMonoNerdFont --list 20 -W 0.4 --fixed-height --border 2 --no-spacing --cw 1 --bdr $BASE05 --tb $BASE05 --tf $BASE01 --nf $BASE07 --nb $BASE01 --ab $BASE00 --hf $BASE01 --hb $BASE05 --fb $BASE00 --ff $BASE07"
+export BEMENU_OPTS="--center --fn JetBrainsMonoNerdFont --list 20 -W 0.4 --fixed-height --border 2 --no-spacing --cw 1 --bdr $BASE05 --tb $BASE05 --tf $BASE01 --nf $BASE07 --af $BASE07 --nb $BASE01 --ab $BASE00 --hf $BASE01 --hb $BASE05 --fb $BASE00 --ff $BASE07"
 
 # firefox
 export MOZ_ENABLE_WAYLAND=1
@@ -52,7 +52,6 @@ if [ -r $HOME/.cargo/env ] ; then
    source $HOME/.cargo/env
 fi
 
-
 if [ -r $HOME/.aliases ] ; then
    source $HOME/.aliases
 fi
@@ -60,6 +59,8 @@ fi
 if [ -r $HOME/.profile.local ] ; then
    source $HOME/.profile.local
 fi
+
+PATH="$PATH:$HOME/.cargo/bin"
 
 editenv ()
 {

@@ -17,7 +17,7 @@
     "use_preproc": false,
     "preproc_sigma": 4,
     "preproc_tor": 7,
-    "amd_encoder_quality_preset": 0,
+    "amd_encoder_quality_preset": 2,
     "rate_control_mode": 0,
     "filler_data": false,
     "entropy_coding": 1,
@@ -43,7 +43,7 @@
     "gamma": 1.0,
     "sharpening": 0.0,
     "linux_async_reprojection": false,
-    "nvenc_quality_preset": 5,
+    "nvenc_quality_preset": 1,
     "nvenc_tuning_preset": 2,
     "nvenc_multi_pass": 1,
     "nvenc_adaptive_quantization_mode": 1,
@@ -159,7 +159,7 @@
         "use_10bit": false,
         "nvenc": {
           "quality_preset": {
-            "variant": "P5"
+            "variant": "P1"
           },
           "tuning_preset": {
             "variant": "LowLatency"
@@ -187,7 +187,7 @@
         },
         "amf": {
           "quality_preset": {
-            "variant": "Quality"
+            "variant": "Speed"
           },
           "enable_vbaq": false,
           "use_preproc": false,
