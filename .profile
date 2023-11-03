@@ -34,6 +34,7 @@ elif type nano > /dev/null ; then
   fi
 fi
 
+
 # bemenu
 export BEMENU_SCALE="2"
 export BEMENU_OPTS="--center --fn JetBrainsMonoNerdFont --list 20 -W 0.4 --fixed-height --border 2 --no-spacing --cw 1 --bdr $BASE05 --tb $BASE05 --tf $BASE01 --nf $BASE07 --af $BASE07 --nb $BASE01 --ab $BASE00 --hf $BASE01 --hb $BASE05 --fb $BASE00 --ff $BASE07"
@@ -45,6 +46,8 @@ export MOZ_ENABLE_WAYLAND=1
 export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
 export QT_QPA_PLATFORM=xcb
 
+export NOTES_DIR="$HOME/source/repos/notes"
+export AUR_DIR="$HOME/source/aur"
 export POSH_THEMES_PATH=$HOME/.poshthemes
 export POSH_THEME=$POSH_THEMES_PATH/ldev2.json
 

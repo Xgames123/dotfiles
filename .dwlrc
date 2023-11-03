@@ -8,7 +8,10 @@ dbus-update-activation-environment --systemd XDG_CURRENT_DESKTOP XDG_SESSION_DES
 systemctl --user restart xdg-desktop-portal &
 
 $DWL_BAR &
-onedriver $HOME/OneDrive &
+
+if ! killall -s onedriver > /dev/null ; then
+  onedriver $HOME/OneDrive &
+fi
 fnott &
 
 # Wait for onedriver to load

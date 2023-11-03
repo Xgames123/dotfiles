@@ -39,6 +39,8 @@
 .config/GIMP
 .config/qalculate
 .config/qutebrowser/__pycache__
+.config/alvr
+.config/blender
 
 # Windows
 !.psrc.ps1

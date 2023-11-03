@@ -40,3 +40,4 @@ elif [ "$action" = "exit" ] ; then
   exit
 fi
 
+#vim:ft=sh

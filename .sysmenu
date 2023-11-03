@@ -7,22 +7,25 @@ exit    :wmaction shell
 logout  :wmaction exit
 
 # utils
-screenshot: screenshot
-fnottmgr:   fnottmgr
+screenshot :screenshot
+fnottmgr   :fnottmgr
+spawn      :bemenu-run
 
 # Other programs
-firefox  :firefox
 foot     :foot
 term     :foot
 shell    :foot
+nvim     :foot sh -c nvim
+htop     :foot sh -c htop
+yazi     :foot sh -c yazi
+fm       :foot sh -c yazi
+qalc     :foot sh -c qalc
+firefox  :firefox
 inkscape :inkscape
 gimp     :gimp
-nvim     :foot sh -c nvim
 discord  :discord
 vieb     :vieb --enable-features=UseOzonePlatform --ozone-platform=wayland
 qutebrowser: qutebrowser
-steam    :steam
-alvr_dash:alvr_dashboard
-htop     :foot sh -c htop
 yambar   :yambar
+blender  :blender
 #krita    :krita

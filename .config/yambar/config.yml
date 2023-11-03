@@ -15,7 +15,7 @@ bar:
   background: 00000000
   font: JetBrainsMonoNerdFont:pixelsize=30
   foreground: *base05
-  spacing: 10
+  spacing: 0
   left:
     - dwl:
         number-of-tags: 9
@@ -71,7 +71,7 @@ bar:
                 string:
                   margin: 10
                   text: "{name}"
-                  foreground: *base07
+                  foreground: *base00
                   deco:
                     stack:
                       - background: {color: *base05}
@@ -107,7 +107,7 @@ bar:
                 string:
                   margin: 10
                   text: "{name}"
-                  foreground: *base05
+                  foreground: *base02
                   deco:
                     stack:
                       - background: {color: *base00}
@@ -159,11 +159,51 @@ bar:
     #                         - border: 
     #                             color: *base02
     #                             size: 3
-    - mem:
+    - script:
         poll-interval: 3000
+        path: "~/.config/yambar/nvidia_gpu.sh"
+        content:
+          list:
+            spacing: 0
+            items:
+              - string:
+                  text: "gpu"
+                  margin: 10
+                  deco: 
+                    stack: 
+                      - background: {color: *base00}
+                      - border: 
+                          color: *base02
+                          size: 3
+              - string:
+                  text: " {gpu_percent_used}%"
+                  margin: 10
+                  deco: 
+                    stack: 
+                      - background: {color: *base00}
+                      - border: 
+                          color: *base02
+                          size: 3
+
+              - string:
+                  text: " {mem_percent_used}%"
+                  margin: 10
+                  deco: 
+                    stack: 
+                      - background: {color: *base00}
+                      - border: 
+                          color: *base02
+                          size: 3
+    - label:
         content:
           string:
-            text: " {percent_used}% ({used:gib}GiB/{total:gib}GiB)"
+            text: ""
+            margin: 20
+
+    - label:
+        content:
+          string:
+            text: "cpu"
             margin: 10
             deco: 
               stack: 
@@ -171,6 +211,8 @@ bar:
                 - border: 
                     color: *base02
                     size: 3
+
+
     - cpu:
         poll-interval: 3000
         content:
@@ -186,6 +228,24 @@ bar:
                         - border: 
                             color: *base02
                             size: 3
+    - mem:
+        poll-interval: 3000
+        content:
+          string:
+            text: " {percent_used}%"
+            margin: 10
+            deco: 
+              stack: 
+                - background: {color: *base00}
+                - border: 
+                    color: *base02
+                    size: 3
+    - label:
+        content:
+          string:
+            margin: 20
+            text: ""
+
     - pulse:
         content:
           list:
