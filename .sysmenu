@@ -8,6 +8,7 @@ logout  :wmaction exit
 
 # utils
 screenshot :screenshot
+pass       :passbemenu
 fnottmgr   :fnottmgr
 spawn      :bemenu-run
 

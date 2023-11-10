@@ -5,6 +5,7 @@ alias lsa="ls -a --color=auto"
 alias lsl="ls -l --color=auto"
 alias lsla="ls -l -a --color=auto"
 alias fm="yazi"
+alias :q="exit"
 
 alias edit="$EDITOR"
 alias notes="cd $NOTES_DIR;$EDITOR"
@@ -13,4 +14,6 @@ alias repos="cd $HOME/source/repos"
 
 # dotfiles
 alias dot='git --git-dir=$HOME/.dotfiles/git/ --work-tree=$HOME'
+alias dotignore="$EDITOR $HOME/.gitignore"
+
 #vim:ft=sh

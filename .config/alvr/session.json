@@ -67,7 +67,7 @@
   "client_connections": {
     "8647.client.alvr": {
       "display_name": "Quest",
-      "current_ip": "192.168.1.224",
+      "current_ip": null,
       "manual_ips": [],
       "trusted": true,
       "connection_state": "Disconnected"
