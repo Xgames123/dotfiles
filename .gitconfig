@@ -5,7 +5,6 @@
   helper = gh-login -b 'pass -t ~/.config/git-credential-pass/default.template -p git/{protocol}/{host}/main'
   helper = manager
 
-
 [user]
 	email = ldev@ldev.eu.org
 	name = ldev
