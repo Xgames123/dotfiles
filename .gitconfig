@@ -22,4 +22,4 @@
 	a = add
 	out = !"sudo poweroff"
 [init]
-	defaultBranch = main
+  defaultBranch = main
