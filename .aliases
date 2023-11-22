@@ -14,7 +14,7 @@ alias repos="cd $HOME/source/repos"
 
 # git
 alias gpl="git pull"
-alias gst="git status"
+alias gits="git status"
 alias gaa="git add ."
 alias gcm="git commit"
 alias gpu="git push"
