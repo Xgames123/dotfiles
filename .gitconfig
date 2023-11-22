@@ -14,6 +14,7 @@
 	autocrlf = false
 	eol = lf
 [alias]
+  sync=!git pull && git push
 	s = status
 	ca = commit -a -m
 	c = commit -m
