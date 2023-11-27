@@ -16,8 +16,8 @@
 [alias]
   sync=!git pull && git push
 	s = status
-	ca = commit -a -m
-	c = commit -m
+	ca = commit -a
+	c = commit
 	pu = push
 	pl = pull
 	a = add

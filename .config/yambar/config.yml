@@ -13,7 +13,7 @@ bar:
   height: 50
   location: top
   background: 00000000
-  font: JetBrainsMonoNerdFont:pixelsize=30
+  font: JetBrainsMonoNF:pixelsize=30
   foreground: *base05
   spacing: 0
   left:
