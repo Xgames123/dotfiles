@@ -21,6 +21,7 @@ htop     :foot sh -c htop
 yazi     :foot sh -c yazi
 fm       :foot sh -c yazi
 qalc     :foot sh -c qalc
+waterfox :waterfox
 firefox  :firefox
 inkscape :inkscape
 gimp     :gimp

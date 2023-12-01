@@ -15,8 +15,5 @@ fi
 fnott &
 
 # Wait for onedriver to load
-while [ ! -f $DWL_WALLPAPER ]; do
-  sleep 1
-done
 swaybg --image $DWL_WALLPAPER &
 
