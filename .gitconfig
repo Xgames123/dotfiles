@@ -2,7 +2,7 @@
 	useHttpPath = true
 [credential "https://github.com/Xgames123"]
   username = Xgames123
-  helper = github -b 'pass -t ~/.config/git-credential-pass/default.template -p git/{protocol}/{host}/main'
+  helper = github --no-auth-on-fail -b 'pass -t ~/.config/git-credential-pass/default.template -p git/{protocol}/{host}/main'
   helper = manager
 
 [user]

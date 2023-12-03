@@ -12,6 +12,8 @@ pass       :passbemenu
 fnottmgr   :fnottmgr
 spawn      :bemenu-run
 
+swaybg_reload: killall swaybg & swaybg --image $DWL_WALLPAPER &
+
 # Other programs
 foot     :foot
 term     :foot
@@ -26,7 +28,6 @@ firefox  :firefox
 inkscape :inkscape
 gimp     :gimp
 discord  :discord
-vieb     :vieb --enable-features=UseOzonePlatform --ozone-platform=wayland
 qutebrowser: qutebrowser
 yambar   :yambar
 blender  :blender
