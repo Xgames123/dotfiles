@@ -30,6 +30,7 @@
 .config/systemd
 .config/dconf
 .config/pulse
+.config/htoprc
 .config/Vieb
 .config/menus
 .config/Valve

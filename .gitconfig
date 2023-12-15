@@ -5,6 +5,11 @@
   helper = github --no-auth-on-fail -b 'pass -t ~/.config/git-credential-pass/default.template -p git/{protocol}/{host}/main'
   helper = manager
 
+[credential "https://github.com/sprksoft"]
+  username = Xgames123
+  helper = github --no-auth-on-fail -b 'pass -t ~/.config/git-credential-pass/default.template -p git/{protocol}/{host}/main'
+  helper = manager
+
 [user]
 	email = ldev@ldev.eu.org
 	name = ldev

@@ -1,17 +1,20 @@
 alias clr=clear
-alias grep="grep --color=auto"
+alias grep="rg"
 alias ls="ls --color=auto"
 alias lsa="ls -a --color=auto"
 alias lsl="ls -l --color=auto"
 alias lsla="ls -l -a --color=auto"
 alias fm="yazi"
 alias q="qalc"
+alias n=nvim
 alias ":q"="exit"
 
+# nav
 alias edit="$EDITOR"
 alias notes="cd $NOTES_DIR;$EDITOR"
 alias aur="cd $AUR_DIR; cd"
 alias repos="cd $HOME/source/repos; cd"
+
 
 # git
 alias gpl="git pull"
