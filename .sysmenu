@@ -1,6 +1,6 @@
 # format name:command for sysmenu to get the program commands from
 
-# Window manager 
+# Window manager
 poweroff:wmaction poweroff
 reboot  :wmaction reboot
 exit    :wmaction shell
@@ -12,7 +12,8 @@ pass       :passbemenu
 fnottmgr   :fnottmgr
 spawn      :bemenu-run
 
-swaybg_reload: killall swaybg & swaybg --image $DWL_WALLPAPER &
+bg_reload: killall swaybg ; swaybg --image $DWL_WALLPAPER &
+bar_reload:killall yambar ; yambar &
 
 # Other programs
 foot     :foot
@@ -28,7 +29,6 @@ firefox  :firefox
 inkscape :inkscape
 gimp     :gimp
 discord  :discord
-qutebrowser: qutebrowser
-yambar   :yambar
 blender  :blender
+#qutebrowser: qutebrowser
 #krita    :krita
