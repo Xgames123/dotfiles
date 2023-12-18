@@ -12,8 +12,9 @@ pass       :passbemenu
 fnottmgr   :fnottmgr
 spawn      :bemenu-run
 
-bg_reload: killall swaybg ; swaybg --image $DWL_WALLPAPER &
-bar_reload:killall yambar ; yambar &
+bg_reload  :killall swaybg ; swaybg --image $DWL_WALLPAPER &
+bar_reload :killall yambar ; yambar &
+notes      :foot sh -c 'cd $NOTES_DIR ; nvim README.md'
 
 # Other programs
 foot     :foot

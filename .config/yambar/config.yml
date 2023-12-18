@@ -1,20 +1,27 @@
-.base16:
-  0: &base00 32302fff
-  1: &base01 3c3836ff
-  2: &base02 5a524cff
-  3: &base03 7c6f64ff
-  4: &base04 bdae93ff
-  5: &base05 ddc7a1ff
-  6: &base06 ebdbb2ff
-  7: &base07 fbf1c7ff
 
+.darksands:
+  0: &accent ffd5a0ff
+  1: &text   C2BAB2ff
+
+  2: &ok     89b482ff
+  3: &pink   d3869bff
+
+  4: &error  ea6962ff
+  5: &warn   e78a4eff
+  6: &info   7daea3ff
+
+  7: &layer0 191817ff
+  8: &layer1 232020ff
+  9: &layer2 2b2828ff
+  10: &layer3 353232ff
+  11: &layer4 3f3c3cff
 
 bar:
   height: 50
   location: top
   background: 00000000
   font: JetBrainsMonoNF:pixelsize=30
-  foreground: *base05
+  foreground: *accent
   spacing: 0
   left:
     - dwl:
@@ -26,12 +33,12 @@ bar:
               string:
                 text: "{name}"
                 margin: 10
-                foreground: *base02
+                foreground: *layer2
                 deco:
                   stack:
-                    - background: {color: *base00}
+                    - background: {color: *layer0}
                     - border:
-                        color: *base02
+                        color: *layer2
                         size: 3
             conditions:
               id == 0:
@@ -44,12 +51,13 @@ bar:
 
                     - string:
                         text: "{layout}"
+                        foreground: *accent
                         margin: 10
                         deco:
                           stack:
-                            - background: {color: *base00}
+                            - background: {color: *layer0}
                             - border:
-                                color: *base02
+                                color: *layer2
                                 size: 3
                     - map:
                         default:
@@ -57,65 +65,72 @@ bar:
                             text: ""
                         conditions:
                           appid != "":
-                              string:
-                                  text: "{appid} ({title})"
-                                  foreground: *base07
-                                  margin: 10
-                                  deco:
-                                    stack:
-                                      - background: {color: *base00}
-                                      - border:
-                                          color: *base02
-                                          size: 3
+                              list:
+                                margin: 10
+                                deco:
+                                  stack:
+                                    - background: {color: *layer0}
+                                    - border:
+                                        color: *layer2
+                                        size: 3
+
+                                items:
+                                  - string:
+                                      text: "({appid}) "
+                                      foreground: *text
+
+                                  - string:
+                                      text: "{title}"
+                                      foreground: *text
               urgent:
                 string:
                   margin: 10
                   text: "{name}"
-                  foreground: *base00
+                  foreground: *layer0
                   deco:
                     stack:
-                      - background: {color: *base05}
+                      - background: {color: *accent}
                       - border:
-                          color: *base02
+                          color: *layer2
                           size: 3
               selected && ~empty:
                 string:
                   margin: 10
                   text: "{name}"
-                  foreground: *base05
+                  foreground: *accent
                   deco:
                     stack:
-                      - background: {color: *base00}
+                      - background: {color: *layer0}
                       - border:
-                          color: *base02
+                          color: *layer2
                           size: 3
                       - underline:
-                          color: *base05
+                          color: *accent
                           size: 3
               ~empty:
                 string:
                   margin: 10
                   text: "{name}"
-                  foreground: *base05
+                  foreground: *text
                   deco:
                     stack:
-                      - background: {color: *base00}
+                      - background: {color: *layer0}
                       - border:
-                          color: *base02
+                          color: *layer2
                           size: 3
               selected:
                 string:
                   margin: 10
                   text: "{name}"
-                  foreground: *base02
+                  foreground: *layer2
                   deco:
                     stack:
-                      - background: {color: *base00}
+                      - background: {color: *layer0}
                       - border:
-                          color: *base02
+                          color: *layer2
                           size: 3
                       - underline:
-                          color: *base05
+                          color: *accent
                           size: 3
 
   right:
@@ -131,9 +146,9 @@ bar:
     #               margin: 10
     #               deco: 
     #                 stack: 
-    #                   - background: {color: *base00}
+    #                   - background: {color: *layer0}
     #                   - border: 
-    #                       color: *base02
+    #                       color: *layer2
     #                       size: 3
     #         conditions:
     #           state == up:
@@ -145,9 +160,9 @@ bar:
     #                     foreground: 009020ff
     #                     deco: 
     #                       stack: 
-    #                         - background: {color: *base00}
+    #                         - background: {color: *layer0}
     #                         - border: 
-    #                             color: *base02
+    #                             color: *layer2
     #                             size: 3
     #                 - string:
     #                     text: " {dl-speed:mib}MiB/s"
@@ -155,97 +170,10 @@ bar:
     #                     foreground: e04040ff
     #                     deco: 
     #                       stack: 
-    #                         - background: {color: *base00}
+    #                         - background: {color: *layer0}
     #                         - border: 
-    #                             color: *base02
+    #                             color: *layer2
     #                             size: 3
-    - script:
-        poll-interval: 3000
-        path: "~/.config/yambar/nvidia_gpu.sh"
-        content:
-          list:
-            spacing: 0
-            items:
-              - string:
-                  text: "gpu"
-                  margin: 10
-                  deco: 
-                    stack: 
-                      - background: {color: *base00}
-                      - border: 
-                          color: *base02
-                          size: 3
-              - string:
-                  text: " {gpu_percent_used}%"
-                  margin: 10
-                  deco: 
-                    stack: 
-                      - background: {color: *base00}
-                      - border: 
-                          color: *base02
-                          size: 3
-
-              - string:
-                  text: " {mem_percent_used}%"
-                  margin: 10
-                  deco: 
-                    stack: 
-                      - background: {color: *base00}
-                      - border: 
-                          color: *base02
-                          size: 3
-    - label:
-        content:
-          string:
-            text: ""
-            margin: 20
-
-    - label:
-        content:
-          string:
-            text: "cpu"
-            margin: 10
-            deco: 
-              stack: 
-                - background: {color: *base00}
-                - border: 
-                    color: *base02
-                    size: 3
-
-
-    - cpu:
-        poll-interval: 3000
-        content:
-          map:
-            conditions:
-              id == -1:
-                - string:
-                    text: " {cpu}%"
-                    margin: 10
-                    deco: 
-                      stack: 
-                        - background: {color: *base00}
-                        - border: 
-                            color: *base02
-                            size: 3
-    - mem:
-        poll-interval: 3000
-        content:
-          string:
-            text: " {percent_used}%"
-            margin: 10
-            deco: 
-              stack: 
-                - background: {color: *base00}
-                - border: 
-                    color: *base02
-                    size: 3
-    - label:
-        content:
-          string:
-            margin: 20
-            text: ""
-
     - pulse:
         content:
           list:
@@ -256,19 +184,91 @@ bar:
                   margin: 10
                   deco: 
                     stack: 
-                      - background: {color: *base00}
+                      - background: {color: *layer0}
                       - border: 
-                          color: *base02
+                          color: *layer2
                           size: 3
               - string:
                   text: "󰕾 {sink_percent}%"
                   margin: 10
                   deco: 
                     stack: 
-                      - background: {color: *base00}
+                      - background: {color: *layer0}
                       - border: 
-                          color: *base02
+                          color: *layer2
                           size: 3
+
+    - label:
+        content:
+          string:
+            margin: 20
+            text: ""
+
+
+    - cpu:
+        poll-interval: 3000
+        content:
+          map:
+            conditions:
+              id == -1:
+                - string:
+                    foreground: *accent
+                    text: "cpu {cpu}%"
+                    margin: 10
+                    deco: 
+                      stack: 
+                        - background: {color: *layer0}
+                        - border: 
+                            color: *layer2
+                            size: 3
+
+    - mem:
+        poll-interval: 3000
+        content:
+          string:
+            foreground: *accent
+            text: "mem {percent_used}%"
+            margin: 10
+            deco: 
+              stack: 
+                - background: {color: *layer0}
+                - border: 
+                    color: *layer2
+                    size: 3
+    - label:
+        content:
+          string:
+            margin: 20
+            text: ""
+
+    - script:
+        poll-interval: 3000
+        path: "~/.config/yambar/nvidia_gpu.sh"
+        content:
+          list:
+            spacing: 0
+            items:
+              - string:
+                  foreground: *accent
+                  text: "gpu {gpu_percent_used}%"
+                  margin: 10
+                  deco: 
+                    stack: 
+                      - background: {color: *layer0}
+                      - border: 
+                          color: *layer2
+                          size: 3
+              - string:
+                  foreground: *accent
+                  text: "vram {mem_percent_used}%"
+                  margin: 10
+                  deco: 
+                    stack: 
+                      - background: {color: *layer0}
+                      - border: 
+                          color: *layer2
+                          size: 3
+
   center:
     - clock:
         time-format: "%I:%M %p"
@@ -282,18 +282,18 @@ bar:
                   margin: 10
                   deco: 
                     stack: 
-                      - background: {color: *base00}
+                      - background: {color: *layer0}
                       - border: 
-                          color: *base02
+                          color: *layer2
                           size: 3
               - string:
                   text: " {date}"
                   margin: 10
                   deco: 
                     stack: 
-                      - background: {color: *base00}
+                      - background: {color: *layer0}
                       - border: 
-                          color: *base02
+                          color: *layer2
                           size: 3
 
 

@@ -1,21 +1,22 @@
 # a .rc for all shells that are bash like
 
-export BASE00="#32302F"
-export BASE01="#3C3836"
-export BASE02="#5A524C"
-export BASE03="#7C6F64"
-export BASE04="#BDAE93"
-export BASE05="#DDC7A1"
-export BASE06="#EBDBB2"
-export BASE07="#FBF1C7"
-export BASE08="#EA6962"
-export BASE09="#E78A4E"
-export BASE0A="#D8A657"
-export BASE0B="#A9B665"
-export BASE0C="#89B482"
-export BASE0D="#7DAEA3"
-export BASE0E="#D3869B"
-export BASE0F="#BD6F3E"
+# darksands
+export COLOR_ACCENT="#ffd5a0"
+export COLOR_TEXT="#C2BAB2"
+
+export COLOR_OK="#89b482"
+export COLOR_PINK="#d3869b"
+
+export COLOR_ERROR="#ea6962"
+export COLOR_WARN="#e78a4e"
+export COLOR_INFO="#7daea3"
+
+export COLOR_LAYER0="#191817"
+export COLOR_LAYER1="#232020"
+export COLOR_LAYER2="#2b2828"
+export COLOR_LAYER3="#353232"
+export COLOR_LAYER4="#3f3c3c"
+
 
 export XDG_CURRENT_DESKTOP=wlroots
 export GPG_TTY=$(tty)
@@ -37,7 +38,7 @@ fi
 
 # bemenu
 export BEMENU_SCALE="2"
-export BEMENU_OPTS="--center --fn JetBrainsMonoNF --list 20 -W 0.4 --fixed-height --border 2 --no-spacing --cw 1 --bdr $BASE05 --tb $BASE05 --tf $BASE01 --nf $BASE07 --af $BASE07 --nb $BASE01 --ab $BASE00 --hf $BASE01 --hb $BASE05 --fb $BASE00 --ff $BASE07"
+export BEMENU_OPTS="--center --fn JetBrainsMonoNF --list 20 -W 0.4 --fixed-height --border 2 --no-spacing --cw 1 --bdr $COLOR_ACCENT --tb $COLOR_ACCENT --tf $COLOR_LAYER1 --nf $COLOR_TEXT --af $COLOR_TEXT --nb $COLOR_LAYER0 --ab $COLOR_LAYER1 --hf $COLOR_LAYER1 --hb $COLOR_ACCENT --fb $COLOR_LAYER1 --ff $COLOR_TEXT"
 
 # firefox
 export MOZ_ENABLE_WAYLAND=1

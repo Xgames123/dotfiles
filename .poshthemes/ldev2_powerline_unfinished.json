@@ -21,7 +21,7 @@
     "layer4": "#3f3c3c",
     "layer5": "#4a4747"
   },
-  "accent_color": "yellow",
+  "accent_color": "#ffd5a0",
 
   "blocks": [
     {
@@ -32,10 +32,11 @@
         {
            "type":"text",
            "style":"plain",
-           "foreground": "darkGray",
+           "foreground": "p:accent",
+           "background": "p:layer2",
            "properties": {
            },
-           "template":"╭(<accent>{{ .UserName }}</><darkGray>@</><accent>{{ .HostName }}</>)"
+           "template":"<p:layer2,transparent>╭</>{{ .UserName }}@{{ .HostName }}<p:layer2,transparent></>"
         }
       ]
     },
@@ -43,14 +44,14 @@
       "alignment": "left",
       "newline": false,
       "type": "prompt",
-      "filler": "─",
       "segments": [
         {
           "type": "path",
           "style": "plain",
-          "foreground": "darkGray",
-
-          "template":"-[ <accent> {{ .Path }}</> ]",
+          "foreground": "p:text",
+          "background": "p:layer2",
+          
+          "template":"<p:layer2,transparent>-</><accent> </>{{ .Path }}<p:layer2,transparent></>",
           "properties": {
             "style": "full"
           }
@@ -59,9 +60,9 @@
           "type": "git",
           "style": "plain",
           "foreground": "darkGray",
-          "template": "[ <accent>{{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}</> ]", 
+          "template": "[ <yellow>{{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}</> ]", 
           "properties": {
-            "fetch_status": true
+          "fetch_status": true
           }
         }
       ]
@@ -76,9 +77,9 @@
           "style": "plain",
           "foreground": "darkGray",
 
-          "template":"╰[ <accent> {{ .Path }}</> ]",
+          "template":"╰[ <yellow> {{ .Path }}</> ]",
           "properties": {
-            "style": "folder"
+          "style": "folder"
           }
         },
         {
@@ -86,20 +87,20 @@
           "style": "plain",
           "foreground": "darkGray",
 
-          "template":" <accent>{{ if .Root }}#{{ else }}${{ end }}</>",
+          "template":" <yellow>{{ if .Root }}#{{ else }}${{ end }}</>",
           "properties": {
-            "style": "folder"
+          "style": "folder"
           }
         }
       ]
     }
+    
 
-
-
+    
   ],
   "secondary_prompt": {
     "background": "transparent",
-    "foreground": "accent",
+    "foreground": "yellow",
     "template": ">"
   }
 }
