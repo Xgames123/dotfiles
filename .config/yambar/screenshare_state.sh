@@ -1,10 +1,6 @@
 #!/bin/sh
 
-DATA_FILE=~/.cache/screenshare
-
-echo "sharing|bool|true"
-echo ""
-exit 0
+DATA_FILE=/tmp/screenshare
 
 if [ ! -f $DATA_FILE ] ; then
   echo "sharing|bool|false"
@@ -12,7 +8,7 @@ if [ ! -f $DATA_FILE ] ; then
   exit 0
 fi
 
-value=cat $DATA_FILE 
+value=$(cat $DATA_FILE)
 if [ "$value" = "true" ] ; then
   echo "sharing|bool|true"
   echo ""

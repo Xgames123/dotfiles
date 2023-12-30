@@ -22,7 +22,7 @@ bar:
   background: 00000000
   font: JetBrainsMonoNF:pixelsize=30
   foreground: *accent
-  spacing: 0
+  spacing: 10
   left:
     - dwl:
         number-of-tags: 9
@@ -174,35 +174,6 @@ bar:
     #                         - border: 
     #                             color: *layer2
     #                             size: 3
-    - pulse:
-        content:
-          list:
-            spacing: 0
-            items:
-              - string:
-                  text: "󰍬 {source_percent}%"
-                  margin: 10
-                  deco: 
-                    stack: 
-                      - background: {color: *layer0}
-                      - border: 
-                          color: *layer2
-                          size: 3
-              - string:
-                  text: "󰕾 {sink_percent}%"
-                  margin: 10
-                  deco: 
-                    stack: 
-                      - background: {color: *layer0}
-                      - border: 
-                          color: *layer2
-                          size: 3
-
-    - label:
-        content:
-          string:
-            margin: 20
-            text: ""
 
 
     - cpu:
@@ -235,22 +206,33 @@ bar:
                 - border: 
                     color: *layer2
                     size: 3
-    - label:
-        content:
-          string:
-            margin: 20
-            text: ""
 
     - script:
         poll-interval: 3000
-        path: "~/.config/yambar/nvidia_gpu.sh"
+        path: "~/.config/yambar/screenshare_state.sh"
+        content:
+          map:
+            conditions:
+
+              sharing:
+                - string:
+                    foreground: *error
+                    text: "󰍹 󰑊"
+                    margin: 10
+                    deco: 
+                      stack: 
+                        - background: {color: *layer0}
+                        - border: 
+                            color: *layer2
+                            size: 3
+
+    - pulse:
         content:
           list:
             spacing: 0
             items:
               - string:
-                  foreground: *accent
-                  text: "gpu {gpu_percent_used}%"
+                  text: "󰍬 {source_percent}%"
                   margin: 10
                   deco: 
                     stack: 
@@ -259,8 +241,7 @@ bar:
                           color: *layer2
                           size: 3
               - string:
-                  foreground: *accent
-                  text: "vram {mem_percent_used}%"
+                  text: "󰕾 {sink_percent}%"
                   margin: 10
                   deco: 
                     stack: 
@@ -268,6 +249,40 @@ bar:
                       - border: 
                           color: *layer2
                           size: 3
+
+#   - label:
+#       content:
+#         string:
+#           margin: 20
+#           text: ""
+ 
+#   - script:
+#       poll-interval: 3000
+#       path: "~/.config/yambar/nvidia_gpu.sh"
+#       content:
+#         list:
+#           spacing: 0
+#           items:
+#             - string:
+#                 foreground: *accent
+#                 text: "gpu {gpu_percent_used}%"
+#                 margin: 10
+#                 deco: 
+#                   stack: 
+#                     - background: {color: *layer0}
+#                     - border: 
+#                         color: *layer2
+#                         size: 3
+#             - string:
+#                 foreground: *accent
+#                 text: "vram {mem_percent_used}%"
+#                 margin: 10
+#                 deco: 
+#                   stack: 
+#                     - background: {color: *layer0}
+#                     - border: 
+#                         color: *layer2
+#                         size: 3
 
   center:
     - clock:

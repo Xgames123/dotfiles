@@ -7,6 +7,7 @@ exit    :wmaction shell
 logout  :wmaction exit
 
 # utils
+matrix     :foot sh -c 'sleep 0.1 ; cmatrix'
 screenshot :screenshot
 pass       :passbemenu
 fnottmgr   :fnottmgr
@@ -31,5 +32,6 @@ inkscape :inkscape
 gimp     :gimp
 discord  :discord
 blender  :blender
+renderdoc:qrenderdoc
 #qutebrowser: qutebrowser
 #krita    :krita

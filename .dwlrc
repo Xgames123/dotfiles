@@ -3,17 +3,18 @@
 echo "DWL_BAR: $DWL_BAR"
 echo "DWL_WALLPAPER: $DWL_WALLPAPER"
 
-systemctl --user import-environment XDG_CURRENT_DESKTOP XDG_SESSION_DESKTOP XDG_SESSION_TYPE WAYLAND_DISPLAY
 dbus-update-activation-environment --systemd XDG_CURRENT_DESKTOP XDG_SESSION_DESKTOP XDG_SESSION_TYPE WAYLAND_DISPLAY
-systemctl --user restart xdg-desktop-portal &
 
 $DWL_BAR &
 
-if ! killall -s onedriver > /dev/null ; then
+if ! killall -s 0 onedriver > /dev/null ; then
   onedriver $HOME/OneDrive &
 fi
 fnott &
 
-# Wait for onedriver to load
+if ! killall -s 0 diskwarn > /dev/null ; then
+  diskwarn &
+fi
+
 swaybg --image $DWL_WALLPAPER &
 

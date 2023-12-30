@@ -4,12 +4,13 @@ export DWL_WALLPAPER=$HOME/Wallpapers/arch2.png
 export DWL_BAR="yambar"
 
 function start_dwl(){
+  export WM=dwl # my things
   export XDG_CURRENT_DESKTOP=wlroots # xdg-desktop-portal
   export XDG_SESSION_DESKTOP=wlroots # systemd
   export XDG_SESSION_TYPE=wayland # xdg/systemd
   echo "" > /tmp/dwl.log # clear log file
   echo "dwl" > /tmp/wm
-  dwl -s dwlproxy
+  dbus-run-session dwl -s dwlproxy
   #dwl &>> /tmp/dwl.log
   #dwl -s dwlproxy
   #dwl > ~/.cache/dwltags
