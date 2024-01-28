@@ -1,3 +1,7 @@
+>### Move to codeberg
+> this project has moved to [codeberg](https://codeberg.org/ldev105/dotfiles)
+>
+
 # dotfiles
 dotfiles that I use for arch linux but they should work on other oses
 
